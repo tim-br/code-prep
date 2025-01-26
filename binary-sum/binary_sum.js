@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/binary-subarrays-with-sum/description/?envType=problem-list-v2&envId=x1lbzfk3
 function binarySumHelper(arr, goal, currentSums, currentMax) {
   if (!arr.length) {
     return currentMax;
