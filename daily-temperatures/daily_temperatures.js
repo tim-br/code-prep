@@ -41,3 +41,15 @@ deepEqual(
 );
 deepEqual(dailyTemperatures([30, 40, 50, 60]), [1, 1, 1, 0]);
 deepEqual(dailyTemperatures([30, 60, 90]), [1, 1, 0]);
+
+// Edge cases
+deepEqual(dailyTemperatures([]), []);
+deepEqual(dailyTemperatures([30]), [0]);
+deepEqual(dailyTemperatures([70, 70, 70, 70]), [0, 0, 0, 0]);
+deepEqual(dailyTemperatures([90, 80, 70, 60]), [0, 0, 0, 0]);
+deepEqual(dailyTemperatures([70, 70, 75, 70, 70]), [2, 1, 0, 0, 0]);
+deepEqual(dailyTemperatures([0, 100, 0, 100]), [1, 0, 1, 0]);
+deepEqual(
+  dailyTemperatures([1, 2, 3, 4, 5, 4, 3, 2, 1]),
+  [1, 1, 1, 1, 0, 0, 0, 0, 0],
+);
