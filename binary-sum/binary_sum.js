@@ -6,7 +6,7 @@ function binarySumHelper(arr, goal, currentSums, currentMax) {
   let first = arr.shift();
 
   let newCurrentSums = currentSums.map((x) => x + first);
-  newCurrentSums.push(first);
+  newCurrentSums.unshift(first); // or push
 
   //let matchingGoalNum = newCurrentSums.filter((x) => x === goal).reduce((x, acc) => 1 + acc, 0)
   let matchingGoalNum = newCurrentSums.filter((x) => x === goal).length;
